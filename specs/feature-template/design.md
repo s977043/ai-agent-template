@@ -1,22 +1,22 @@
-# Design: feature‑template
+# 設計: feature-template
 
-## Architecture
+## アーキテクチャ
 
-Outline the high‑level architecture for this feature.  Use layered architecture (e.g., CLI → UseCase → Adapter → Domain) or another pattern appropriate to your project.  Describe how data flows between components and any important design constraints.
+この機能の高レベルなアーキテクチャを記述します。レイヤードアーキテクチャ（例: CLI → UseCase → Adapter → Domain）や、プロジェクトに適した別のパターンを使用します。コンポーネント間でどのようにデータが流れるか、重要な設計上の制約事項を説明してください。
 
-## Components
+## コンポーネント
 
-List the core components or classes/modules involved in the implementation.  For example:
+実装に関わる主要なコンポーネントやクラス / モジュールを列挙します。例えば:
 
-- **AgentCli**: Parses command‑line arguments and orchestrates execution.
-- **AgentCore**: Encapsulates the main business logic for the feature.
-- **DataAdapter**: Handles interactions with external systems (e.g., file I/O, APIs).
+- **AgentCli**: コマンドライン引数を解析し、実行をオーケストレーションします。
+- **AgentCore**: この機能の主要なビジネスロジックを内包します。
+- **DataAdapter**: 外部システムとのやり取りを処理します（ファイル I/O や API など）。
 
-## Sequence (happy path)
+## シーケンス (Happy Path)
 
-1. The user invokes the command with appropriate arguments.
-2. The CLI layer validates inputs and constructs a request object.
-3. The core logic processes the request, invoking adapters as needed.
-4. Results are returned to the user or written to output files.
+1. ユーザーが適切な引数でコマンドを実行する。
+2. CLI層が入力を検証し、リクエストオブジェクトを構築する。
+3. コアロジックがリクエストを処理し、必要に応じてアダプタを呼び出す。
+4. 結果がユーザーに返されるか、出力ファイルに書き込まれる。
 
-Include diagrams or pseudocode as necessary to clarify complex workflows.
+複雑なワークフローを明確にするため、必要に応じて図や疑似コードを含めてください。
