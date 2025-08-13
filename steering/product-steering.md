@@ -1,27 +1,27 @@
-# Product Steering (SDD Guardrails)
+# プロダクト・ステアリング（SDDガードレール）
 
-## Product Vision
+## プロダクトビジョン
 
-Describe your target users, the pain points your AI agent solves, and the north-star metric that defines success.
+対象ユーザー、AIエージェントが解決する課題、成功を定義するノーススターメトリクスを記述します。
 
-## Principles
+## 原則
 
-- **Small & Test‑First:** Work in small increments and write tests before implementation.
-- **Readable & Clean Architecture:** Prioritize clear, maintainable code organized by layers (interface, use case, adapter, domain).
-- **Non‑Functional Priorities:** List and rank performance, availability, security, and other non‑functional requirements relevant to your project.
+- **Small & Test-First:** 小さな単位で作業し、実装前にテストを書きます。
+- **Readable & Clean Architecture:** 層（インターフェース、ユースケース、アダプタ、ドメイン）ごとに整理された読みやすく保守しやすいコードを優先します。
+- **非機能要件の優先順位:** プロジェクトに関連する性能、可用性、セキュリティなどの非機能要件を列挙し、優先順位をつけます。
 
-## Decision Policy
+## 意思決定ポリシー
 
-- Always follow the sequence **specification → design → tasks**; do not jump ahead to implementation.
-- Any change in implementation must be reflected back in the specification documents and reviewed.
-- Document design decisions with trade‑off tables to justify choices.
+- 必ず **仕様 → 設計 → タスク** の順で進め、実装へ先走らない。
+- 実装に対する変更はすべて仕様書に反映させ、レビューする。
+- 設計上の決定はトレードオフ表で記録し、格好を明確にする。
 
 ## Definition of Ready
 
-A specification is ready for implementation when user stories, acceptance criteria, and key constraints are clearly defined.
+ユーザーストーリー、受け入れ基準、主要な制約が明確に定義されているとき、その仕様は実装の準備が整っています。
 
 ## Definition of Done
 
-- Unit and integration tests pass.
-- All specification documents (requirements, design, tasks, README) are updated as necessary.
-- A basic security and performance check has been performed.
+- 単体テストおよび統合テストが通過している。
+- すべての仕様ドキュメント（requirements、design、tasks、README）が必要に応じて更新されている。
+- セキュリティとパフォーマンスの簡易チェックが行われている。
