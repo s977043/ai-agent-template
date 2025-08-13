@@ -1,17 +1,17 @@
-# Requirements: feature‑template
+# 要件: feature-template
 
-## User Stories
+## ユーザーストーリー
 
-- **U1:** As a user, I want the AI agent to … so that …
-- **U2:** As a developer, I need … to …
+- **U1:** ユーザーとして、AIエージェントに〜してほしい。なぜなら〜だから。
+- **U2:** 開発者として、〜したいので〜が必要だ。
 
-## Acceptance Criteria
+## 受け入れ基準
 
-- **A1:** When …, the agent must …
-- **A2:** The command‑line interface must support … (e.g., `agent run --option value`)
-- **A3:** Error conditions are reported clearly with actionable messages.
-- **A4:** Performance: Processing a typical workload (e.g., N documents) must complete within X seconds.
+- **A1:** 〜が起きたとき、エージェントは〜しなければならない。
+- **A2:** コマンドラインインターフェースは〜をサポートすること。例: `agent run --option value`
+- **A3:** エラー条件は、アクション可能なメッセージと共に明確に報告される。
+- **A4:** パフォーマンス: 具体的なワークロードの処理 (e.g., N 件の文書)が X 秒以内に完了すること。
 
-## Constraints
+## 制約
 
-- Describe non‑functional constraints such as offline operation, maximum memory usage, or dependency licensing.
+- オフライン動作、メモリ使用量の上限、依存ライセンスなどの非機能要件を記述する。
