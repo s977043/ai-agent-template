@@ -1,8 +1,8 @@
-# Tasks
+# タスク
 
-- [ ] Implement command‑line parsing (e.g., with `argparse` or equivalent).
-- [ ] Implement the core logic for the feature.
-- [ ] Implement any adapters needed (e.g., file system interactions, API calls).
-- [ ] Write unit tests for each component.
-- [ ] Write integration tests covering the entire flow.
-- [ ] Update documentation (README, specification files) as needed.
+- [ ] コマンドライン解析を実装する。例: argparse 等を用いて。
+- [ ] 機能のコアロジックを実装する。
+- [ ] 必要なアダプタを実装する。例: ファイルシステム操作、API 呼び出しなど。
+- [ ] 各コンポーネントのユニットテストを作成する。
+- [ ] 全体のフローをカバーする結合テストを書く。
+- [ ] 必要に応じてドキュメント（README、他の仕様書ファイルなど）を更新する。
