@@ -32,4 +32,4 @@ append "$CORE"  "1) Core（共通の基本動作）"
 append "$PROJ"  "2) Project（テンプレート固有の上書き）"
 append "$LOCAL" "3) Local（開発者ローカルの最終上書き）"
 
-echo "Wrote $OUT"
+printf 'Wrote %s\n' "$OUT"
