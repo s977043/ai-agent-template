@@ -1,5 +1,5 @@
-This directory is intended to hold Claude Code slash command definitions.
+このディレクトリは、Claude Code のスラッシュコマンド定義を格穏するためのものです。
 
-The template does **not** include the actual command definitions.  To enable Spec‑Driven Development in your project, copy the appropriate command files from the original [claude‑code‑spec](https://github.com/gotalab/claude-code-spec) repository.  The commands reside under `.claude/commands/kiro/` in that project and define interactions such as `/kiro:steering`, `/kiro:spec‑init`, `/kiro:spec‑requirements`, `/kiro:spec‑design`, and `/kiro:spec‑tasks`.
+このテンプレートにはコマンド定義そのものは含まれていません。あなたのプロジェクトで仕様書験駆動開発 (Spec​‑Driven Development) を実現するには、元の [claude-code-spec](https://github.com/gotalab/claude-code-spec) リポジトリから適切なコマンドファイルをコピーしてください。コマンドはそちらの `.claude/commands/kiro/` 配下にあり、 `/kiro:steering`、`/kiro:spec-init`、`/kiro:spec-requirements`、`/kiro:spec-design`、`/kiro:spec-tasks` などのやりとりを定義しています。
 
-After copying the desired command files into this directory, Claude Code will recognize the slash commands defined within and enforce your specification workflow accordingly.
+必要なコマンドファイルをこのディレクトリにコピーすると、Claude Code はその中で定義されたスラッシュコマンドを認識し、仕様作成フローを適用できるようになります。
