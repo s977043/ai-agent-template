@@ -10,7 +10,11 @@ LOCAL="$ROOT/.gemini/Gemini.local.md"
 mkdir -p "$ROOT/.gemini"
 
 {
-  echo "<!-- Auto-generated: $(date -u +'%Y-%m-%dT%H:%M:%SZ') -->"
+TIMESTAMP="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+mkdir -p "$ROOT/.gemini"
+
+{
+  echo "<!-- Auto-generated: $TIMESTAMP -->"
   echo "# System Prompt (Gemini CLI)"
   echo
   echo "> 規約が競合する場合は **後勝ち**。読み込み順: 1) Core 2) Project 3) Local。"
