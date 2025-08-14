@@ -1,0 +1,62 @@
+name: gemini-review
+on:
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build-system-md:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make script executable
+        run: chmod +x scripts/build-gemini-system-md.sh
+      - name: Build .gemini/system.md
+        run: ./scripts/build-gemini-system-md.sh
+      - name: Assert system.md created
+        run: test -s .gemini/system.md
+      - name: Upload system.md artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gemini-system-md
+          path: .gemini/system.md
+      - name: Comment with artifact link
+        uses: actions/github-script@v7
+        env:
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+        with:
+          script: |
+            const pr = context.payload.pull_request?.number || context.issue.number;
+            const runUrl = `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`;
+            const body = [
+              "✅ **Gemini build completed**",
+              "- `.gemini/system.md` を生成して Artifact にアップロードしました。",
+              `- 実行ログとダウンロード: ${runUrl}`
+            ].join("\\n");
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr,
+              body
+            });
+
+  lint-shell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install shellcheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+      - name: ShellCheck
+        run: shellcheck scripts/*.sh
+
+  lint-markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install markdownlint
+        run: npm i -g markdownlint-cli2
+      - name: Run markdownlint
+        run: markdownlint-cli2 '**/*.md' '#node_modules'
