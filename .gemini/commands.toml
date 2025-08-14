@@ -1,0 +1,27 @@
+[[commands]]
+name = "plan"
+description = "仕様や課題を小さく分割し、優先度/工数/依存を表で出す"
+prompt = """
+タスクを表で：列=ID, タイトル, 優先度(High/Med/Low), 工数(h), 依存
+"""
+
+[[commands]]
+name = "fix"
+description = "不具合の再現→原因仮設→最小修正→テスト→差分を出す"
+prompt = """
+再現手順/原因仮設/最小修正案/テスト/差分 を順に出力。
+"""
+
+[[commands]]
+name = "test"
+description = "TDD テンプレで失敗テスト→最小実装→リファクタ"
+prompt = """
+失敗テストの追加、実行ログの要約、最小実装の差分、最終グリーンの確認を提示。
+"""
+
+[[commands]]
+name = "doc"
+description = "README/コメント/CHANGELOG 更新案を出す"
+prompt = """
+変更要約・根拠・差分パッチ（必要なら）を出力。
+"""
