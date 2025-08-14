@@ -23,7 +23,7 @@ mkdir -p "$ROOT/.gemini"
 append() {
   local file="$1"; local title="$2"
   if [[ -f "$file" ]]; then
-    echo -e "\n---\n\n## ${title}\n" >> "$OUT"
+    printf '\n---\n\n## %s\n' "${title}" >> "$OUT"
     cat "$file" >> "$OUT"
   fi
 }
