@@ -1,0 +1,25 @@
+name: gemini-commands-validate
+on:
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - ".gemini/**/*.toml"
+      - ".gemini/*.toml"
+jobs:
+  toml-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate TOML files
+        run: |
+          python3 - <<'PY'
+          import sys, pathlib
+          try: import tomllib
+          except Exception as e: print("tomllib not available:", e, file=sys.stderr); sys.exit(1)
+          base = pathlib.Path('.gemini')
+          ok = True
+          for p in list(base.glob('*.toml')) + list(base.glob('**/*.toml')):
+              try: tomllib.loads(p.read_text(encoding='utf-8')); print(f"OK: {p}")
+              except Exception as ex: ok = False; print(f"ERROR in {p}: {ex}", file=sys.stderr)
+          sys.exit(0 if ok else 2)
+          PY
