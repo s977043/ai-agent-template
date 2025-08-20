@@ -1,0 +1,17 @@
+name: Verify Copilot Instructions
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure .github/copilot-instructions.md exists
+        run: |
+          if [ ! -f ".github/copilot-instructions.md" ]; then
+            echo "::error title=Missing copilot-instructions.md::Create .github/copilot-instructions.md to enable repository-wide Copilot guidance."
+            exit 1
+          fi
