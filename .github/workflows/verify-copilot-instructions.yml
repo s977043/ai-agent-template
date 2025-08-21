@@ -8,7 +8,7 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.1.1 # Pin to a specific release for supply chain security
       - name: Ensure .github/copilot-instructions.md exists
         run: |
           if [ ! -f ".github/copilot-instructions.md" ]; then
