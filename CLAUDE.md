@@ -1,31 +1,31 @@
-# Claude Code Spec-Driven Template for AI Agents
+# AIエージェント向け Claude Code 仕様駆動テンプレート
 
-This repository provides a template for building AI agents using a Spec‑Driven Development (SDD) process.  It draws inspiration from Kiro’s specification‑driven workflow for Claude Code.
+このリポジトリは、仕様駆動開発（Spec-Driven Development、SDD）プロセスを用いてAIエージェントを構築するためのテンプレートを提供します。Kiroの Claude Code 向け仕様駆動ワークフローからインスピレーションを得ています。
 
-## Getting Started
+## 使い方
 
-1. **Clone this template** or use it directly as a template on GitHub.
-2. Copy the `.claude/commands` directory and this `CLAUDE.md` into your own project when you start a new AI agent.  These files define the slash commands and guardrails used by Claude Code.
-3. Run `/kiro:steering` in Claude Code to create a steering document describing your product vision, principles, and decision policies.
-4. Initialize the first specification with `/kiro:spec-init "Your project description"`.
-5. For each feature, run `/kiro:spec-requirements <feature-name>` to define requirements, `/kiro:spec-design <feature-name>` to design the implementation, and `/kiro:spec-tasks <feature-name>` to break the work into tasks.
-6. Implement tasks in order, writing tests first where possible.  Keep your specifications up to date when requirements or designs change.
+1. **このテンプレートをクローン** するか、GitHubでテンプレートとして直接使用します。
+2. 新しいAIエージェントを開始する際は、`.claude/commands` ディレクトリとこの `CLAUDE.md` をあなたのプロジェクトにコピーします。これらのファイルは Claude Code で使用されるスラッシュコマンドとガードレールを定義します。
+3. Claude Code で `/kiro:steering` を実行して、プロダクトビジョン、原則、意思決定ポリシーを記述するステアリング文書を作成します。
+4. `/kiro:spec-init "プロジェクトの説明"` で最初の仕様を初期化します。
+5. 各機能について、`/kiro:spec-requirements <機能名>` で要件を定義し、`/kiro:spec-design <機能名>` で実装を設計し、`/kiro:spec-tasks <機能名>` で作業をタスクに分割します。
+6. タスクを順番に実装し、可能な限りテストを先に書きます。要件や設計が変更された場合は、仕様を最新に保ちます。
 
-## Repository Structure
+## リポジトリ構造
 
 ```
 .
-├── .claude/commands/      # Slash command definitions (to be copied from Kiro)
-├── CLAUDE.md              # This file; defines high‑level spec‑driven guidelines
+├── .claude/commands/      # スラッシュコマンド定義（Kiroからコピーする）
+├── CLAUDE.md              # このファイル；高レベルな仕様駆動ガイドラインを定義
 ├── steering/
-│   └── product‑steering.md # Template steering document for your product
+│   └── product‑steering.md # プロダクト用ステアリング文書テンプレート
 └── specs/
     └── feature‑template/
-        ├── requirements.md # Template requirements specification
-        ├── design.md       # Template technical design
-        └── tasks.md        # Template list of implementation tasks
+        ├── requirements.md # 要件仕様テンプレート
+        ├── design.md       # 技術設計テンプレート
+        └── tasks.md        # 実装タスクリストテンプレート
 ```
 
-## Notes
+## 注意事項
 
-This template does **not** include the actual slash command definitions.  Those are available in the original Kiro repository (https://github.com/gotalab/claude-code-spec).  See `.claude/commands/README.md` for guidance on how to obtain them.
+このテンプレートには実際のスラッシュコマンド定義は **含まれていません**。これらは元の Kiro リポジトリ（https://github.com/gotalab/claude-code-spec）で入手できます。取得方法については `.claude/commands/README.md` を参照してください。
