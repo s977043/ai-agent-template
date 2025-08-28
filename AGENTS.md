@@ -21,7 +21,7 @@
 
 ## このリポジトリでの活用方法
 - 新規にエージェントを実装する場合は、この `AGENTS.md` と `DEVELOPMENT_GUIDELINES.md` を確認し、Spec Driven Development/TDD のプロセスに従ってステアリング文書と仕様を作成してください。
-- エージェントは常に最新の仕様を参照し、`/k iro:spec-init` や `/k iro:spec-design` などのコマンドを用いて機能を定義します。
+- エージェントは常に最新の仕様を参照し、`/kiro:spec-init` や `/kiro:spec-design` などのコマンドを用いて機能を定義します。
 - モノレポとして構成を変更する場合は、サブディレクトリ内にも必要に応じて `AGENTS.md` を配置し、エージェントに適切な指示を提供してください。
 
 ---
