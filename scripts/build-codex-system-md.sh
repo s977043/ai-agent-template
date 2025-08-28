@@ -2,18 +2,18 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-OUT="$ROOT/.gemini/system.md"
-CORE="$ROOT/.gemini/Gemini.core.md"
-PROJ="$ROOT/.gemini/Gemini.project.md"
-LOCAL="$ROOT/.gemini/Gemini.local.md"
+OUT="$ROOT/.codex/system.md"
+CORE="$ROOT/.codex/Codex.core.md"
+PROJ="$ROOT/.codex/Codex.project.md"
+LOCAL="$ROOT/.codex/Codex.local.md"
 
-mkdir -p "$ROOT/.gemini"
+mkdir -p "$ROOT/.codex"
 
 TIMESTAMP="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
 {
   echo "<!-- Auto-generated: $TIMESTAMP -->"
-  echo "# System Prompt (Gemini CLI)"
+  echo "# System Prompt (GitHub Copilot CLI)"
   echo
   echo "> 規約が競合する場合は **後勝ち**。読み込み順: 1) Core 2) Project 3) Local。"
 } > "$OUT"

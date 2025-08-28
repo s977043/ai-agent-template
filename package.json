@@ -1,0 +1,30 @@
+{
+  "name": "ai-agent-template",
+  "version": "1.0.0",
+  "description": "AI エージェント向け仕様書駆動開発テンプレート",
+  "scripts": {
+    "gemini:build": "bash scripts/build-gemini-system-md.sh",
+    "gemini:start": "GEMINI_SYSTEM_MD=1 gemini",
+    "codex:build": "bash scripts/build-codex-system-md.sh",
+    "codex:start": "gh copilot",
+    "codex:suggest": "gh copilot suggest",
+    "codex:explain": "gh copilot explain",
+    "codex:ask": "gh copilot ask"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "spec-driven-development",
+    "tdd",
+    "claude",
+    "gemini",
+    "codex",
+    "copilot"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "optionalDependencies": {
+    "@githubnext/github-copilot-cli": "^0.5.0"
+  }
+}

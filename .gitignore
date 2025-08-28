@@ -1,3 +1,16 @@
 # Gemini
 /.gemini/Gemini.local.md
+/.gemini/system.md
+
+# Codex
+/.codex/Codex.local.md
+/.codex/system.md
+
+# Environment
 /.env
+
+# Node.js
+/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
