@@ -28,7 +28,8 @@
 
 1. **Claude Code** - 仕様書駆動開発（`.claude/` ディレクトリ、`CLAUDE.md`）
 2. **Gemini CLI** - 対話的な開発支援（`.gemini/` ディレクトリ、`GEMINI.md`、`GEMINI_USAGE.md`）
-3. **GitHub Copilot CLI** - コマンド生成とコード支援（`.codex/` ディレクトリ、`CODEX.md`、`CODEX_USAGE.md`）
+3. **GitHub Copilot CLI** - コマンド生成とシェル操作支援（`.codex/` ディレクトリ、`CODEX.md`、`CODEX_USAGE.md`）
+4. **GitHub Copilot** - リアルタイムコード補完・生成（`COPILOT.md`、`COPILOT_USAGE.md`）
 
 各ツールの詳細な使用方法は対応する設定ファイルを参照してください。
 
