@@ -95,9 +95,12 @@ Ctrl+Shift+P → "GitHub Copilot: Open Chat"
 2. **テストファーストでの実装**
    ```javascript
    // 失敗するテストを先に作成
-   describe('User Authentication', () => {
-     test('should authenticate valid user', async () => {
-       // Copilotにテストの実装を支援してもらう
+       const user = { email: 'test@example.com', password: 'password123' };
+       const result = await authenticateUser(user.email, user.password);
+       expect(result).toHaveProperty('token');
+       expect(result.token).toMatch(/^eyJ/); // JWTトークンの先頭
+     });
+   });
    ```
 
 3. **API設計の実装**
