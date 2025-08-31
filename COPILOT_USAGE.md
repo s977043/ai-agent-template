@@ -86,10 +86,10 @@ Ctrl+Shift+P → "GitHub Copilot: Open Chat"
 
 1. **要件からのコード生成**
    ```javascript
-   // specs/user-auth/requirements.md に基づいたユーザー認証機能
-   // - メールとパスワードによる認証
-   // - JWTトークンの生成
    // - セッション管理
+   function authenticateUser(email, password) {
+     // ここにCopilotが要件に基づいて実装を提案します
+   }
    ```
 
 2. **テストファーストでの実装**
