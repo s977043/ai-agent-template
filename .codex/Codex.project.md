@@ -38,3 +38,6 @@
 - Shell スクリプト（POSIX 準拠）
 - AI エージェント連携（Claude, Gemini）
 - 仕様書テンプレート（feature-template/）
+
+## コードレビューガイドライン
+GitHub Copilot CLI を使用したコードレビューの詳細手法については、`code-review-guidelines.md` を参照してください。対話的で安全性を重視したレビューアプローチを提供しています。

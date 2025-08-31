@@ -32,3 +32,8 @@
 ## レビュー指針（Copilot Code Review適用）
 - 仕様との不合り・副作用・エラーパス・境界条件を重点確認する。
 - 代替案がある場合は、**なぜ**その案を推すかを短く述べる。
+- **詳細なレビューガイドライン**: `.github/ai-agent-code-review-guidelines.md` を参照。
+- **AI ツール別の専用レビュー設定**:
+  - Claude Code: `.claude/code-review-guidelines.md`
+  - GitHub Copilot CLI: `.codex/code-review-guidelines.md`  
+  - Gemini CLI: `.gemini/code-review-guidelines.md`
