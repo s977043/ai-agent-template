@@ -9,7 +9,8 @@
     "codex:start": "gh copilot",
     "codex:suggest": "gh copilot suggest",
     "codex:explain": "gh copilot explain",
-    "codex:ask": "gh copilot ask"
+    "codex:ask": "gh copilot ask",
+    "validate:code-review": "bash scripts/validate-code-review-setup.sh"
   },
   "keywords": [
     "ai",
